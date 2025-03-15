@@ -11,7 +11,7 @@ O respositório está divido em pastas com base no que foi aprendido em cada dia
 - ...
 ### 🔑 Conceitos chaves do kubernetes que foram abordados: 
 > [!IMPORTANT]
-> Container Engine, OCI - Open container initiative, Container Runtime, Arquitetura do Kubernetes: API Server, ETCD, Sheduler, Controller Manager,  Kubelet, Kube Proxy, Deamon set;  
+> Container Engine, Open container initiative (OCI), Container Runtime; Arquitetura do Kubernetes: API Server, ETCD, Sheduler, Controller Manager,  Kubelet, Kube Proxy, Deamon set;  
 </br>
 
 ## 📜  Resumo de alguns aprendizados obtidos durarante a realização das aulas:
