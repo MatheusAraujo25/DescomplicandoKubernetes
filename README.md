@@ -9,7 +9,7 @@ O respositório está divido em pastas com base no que foi aprendido em cada dia
 - 📁 day-2
 - 📁 day-3
 - ...
-### 🔑 Conceitos chaves do kubernetes que aprendi: 
+### 🔑 Conceitos chaves do kubernetes que foram abordados: 
 Container Engine, OCI - Open container initiative, Container Runtime, Arquitetura do Kubernetes: API Server, ETCD, Sheduler, Controller Manager,  Kubelet, Kube Proxy, Deamon set; 
 
 </br>
