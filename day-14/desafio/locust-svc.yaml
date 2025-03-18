@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: locust-giropops
+spec:
+  selector:
+    app: locust-giropops
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8089
+  type: ClusterIP
+
+    #Caso nao esteja usando o EKS, para expor esse servico use o clusterIP e coloca um ingress para funcionar, ou utilizar o portforword. 

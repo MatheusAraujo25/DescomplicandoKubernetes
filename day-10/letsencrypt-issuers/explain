@@ -1,0 +1,1 @@
+Quando efetuar a criação do pods, cert-manager, manifestos e afins. Quando nós definimos o host localmente usando kind, é necessário criar um port-forward, no etc/hosts

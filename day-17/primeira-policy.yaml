@@ -1,0 +1,13 @@
+apiVersion: networking.kubernetes.io/v1
+kind: NetworkPolicy
+metadata:
+  name: primeira-netpol 
+  namespace: giropops
+spec:
+  podSelector:
+    matchLabels:
+      app: redis
+  ingress:
+  - from:
+    - podSelector: {}
+

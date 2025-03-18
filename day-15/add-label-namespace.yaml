@@ -1,0 +1,17 @@
+apiVersion: kyverno/v1
+kind: ClusterPolicy
+metadata: 
+  name: add-label-namespace
+spec: 
+  rules:
+  - name: add-label-ns
+    match: 
+      resources:
+        kinds:
+        - NameSpace
+    mutate: 
+      patchStrategicMerge:
+        metadata: 
+          labels:
+            Staging: "Ambiente_de_testes"
+

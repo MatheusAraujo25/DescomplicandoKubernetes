@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ubuntu-deployment
+  name: ubuntu-deployment
+  namespace: example
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ubuntu-deployment
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: 
+      maxSurge: 0
+      maxUnavailable: 2
+  template: 
+    metadata: 
+      labels:
+        app: ubuntu-deployment
+    spec:
+      containers:
+      - image: ubuntu
+        name: ubuntu-1
+        args: # argumentos que serão passados para o container
+        - sleep # usando o comando sleep para manter o container em execução
+        - infinity # o argumento infinity faz o container esperar para sempr
+        volumeMounts:
+        - name: primeiro-emptydir 
+          mountPath: /giropops
+        resources: 
+          limits:
+            cpu: 1
+            memory: 2Gi
+          requests:
+            cpu: 0.5
+            memory: 1Gi
+      volumes:
+      - name: primeiro-emptydir 
+        emptyDir: 
+           sizeLimit: 256Mi 
+

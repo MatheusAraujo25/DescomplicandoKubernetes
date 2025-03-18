@@ -1,0 +1,19 @@
+apiVersion: kyverno/v1
+kind: ClusterPolicy
+metadata:
+  name: dissalow-root-user
+spec:
+  validationFailureAction: Enforce
+  rules:
+  - name: check-nunAsRoot
+  match: 
+    resources:
+      kinds:
+      - Pod
+  validate:
+   message: "Root? Isso nao pode amigo!"
+   pattern:
+     spec:
+       containers:
+       - securityContent:
+          runAsNonRoot: true
